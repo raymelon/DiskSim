@@ -1,0 +1,1 @@
+jar cfm DiskSim.jar MANIFEST.txt .
