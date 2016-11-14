@@ -1,4 +1,10 @@
-# DiskSim :dvd:
+# DiskSim :minidisc: [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check out DiskSim! Disk Scheduling Algorithms Simulator. @github https://github.com/raymelon/DiskSim)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://reposs.herokuapp.com/?path=raymelon/DiskSim)
+[![HitCount](https://hitt.herokuapp.com/raymelon/DiskSim/hits.svg)](https://github.com/raymelon/DiskSim)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
+
 Disk Scheduling Algorithms Simulator.
 <br>
 The name speaks for itself.
@@ -33,7 +39,7 @@ The name speaks for itself.
   Java HotSpot(TM) 64-bit Server VM (build 25.51-b03, mixed mode)
   ```
 
-## License
+## License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [The MIT License](https://opensource.org/licenses/MIT)
 - [LICENSE file](https://github.com/raymelon/DiskSim/blob/master/LICENSE.md)
 
