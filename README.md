@@ -11,7 +11,7 @@ The name speaks for itself.
 
 ## Download :arrow_down:
 [`DiskSim.jar`](https://github.com/raymelon/DiskSim/blob/master/src/DiskSim.jar) 
->  :warning: Only supports SSTF at the moment.
+>  :warning: Only supports SSTF and FCFS at the moment.
 
 ## Algorithms Supported :thought_balloon:
 > see http://www.cs.iit.edu/~cs561/cs450/disksched/disksched.html or [Google](google.com) those, you know. :earth_asia: <br>
