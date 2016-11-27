@@ -47,7 +47,7 @@ public class GUI
 
 	private Plotter plotter;
 
-	private SSTF generator;
+	private DischedAlgoBase generator;
 	private String content;
 
 	private JTextArea txtAreaSolution;
@@ -56,6 +56,9 @@ public class GUI
 	private JScrollPane scrSolution;
 
 	private Component highlighter;
+
+	private JComboBox comboAlgos;
+	private String[] arrAlgos = { "First Come-First Serve", "Shortest Seek Time First" };
 
 	public GUI() {
 
@@ -183,6 +186,9 @@ public class GUI
 
 		panelControls = new JPanel();
 
+		comboAlgos = new JComboBox<String>(arrAlgos);
+		panelControls.add(comboAlgos);
+
 		btnAddInput = new JButton("Add point");
 		btnAddInput.addActionListener(this);
 		panelControls.add(btnAddInput);
@@ -281,6 +287,8 @@ public class GUI
 
 		panelInputPoints.setEnabled(false);
 
+		comboAlgos.setEnabled(false);
+
 		plotter.setStatus(true);
 		points.clear();
 
@@ -289,7 +297,17 @@ public class GUI
 
 		content = new String();
 
-		generator = new SSTF( (int) jsPrevious.getValue(), (int) jsCurrent.getValue(), (int) jsSeekRate.getValue(), points);
+		// filtering of algo
+
+		Object selected = comboAlgos.getSelectedItem();
+
+		if( selected == arrAlgos[0] ) {
+			generator = new FCFS( (int) jsPrevious.getValue(), (int) jsCurrent.getValue(), (int) jsSeekRate.getValue(), points); 
+		} else if( selected == arrAlgos[1] ) {
+			generator = new SSTF( (int) jsPrevious.getValue(), (int) jsCurrent.getValue(), (int) jsSeekRate.getValue(), points); 
+		}
+
+		//generator = new SSTF( (int) jsPrevious.getValue(), (int) jsCurrent.getValue(), (int) jsSeekRate.getValue(), points);
 		points = generator.getPoints();
 
 		plotter.setMax( (int) jsMaxTrack.getValue() );
@@ -330,6 +348,8 @@ public class GUI
 		btnAddInput.setEnabled(true);
 		btnDoGraph.setEnabled(true);
 
+		comboAlgos.setEnabled(true);
+
 		plotter.setStatus(false);
 		panelInputPoints.removeAll();
 
@@ -357,6 +377,7 @@ public class GUI
 
 		btnAddInput.setEnabled(true);
 		btnDoGraph.setEnabled(true);
+		comboAlgos.setEnabled(true);
 		btnEdit.setEnabled(false);
 	}
 
