@@ -6,8 +6,8 @@ public class SSTF extends DischedAlgoBase implements Comparator<Integer> {
 
 	public SSTF(int previous, int current, int seekRate, ArrayList<Integer> tracks) {
 		
-		this.tracks = new ArrayList<Integer>( tracks );
-		duplicate = new ArrayList<Integer>( this.tracks );
+		this.tracks = tracks;
+		duplicate = tracks;
 
 		this.previous = previous;
 		this.current = current;
