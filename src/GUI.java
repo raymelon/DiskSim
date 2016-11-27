@@ -8,7 +8,7 @@ import javax.swing.UIManager.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -19,7 +19,7 @@ public class GUI
 				FocusListener, 
 				Runnable {
 
-	private LinkedList<Integer> points = new LinkedList<Integer>();
+	private ArrayList<Integer> points = new ArrayList<Integer>();
 
 	private JPanel panelInput;
 
@@ -30,8 +30,8 @@ public class GUI
 	private JSpinner jsMaxTrack;
 	private JSpinner jsTrackCount;
 	private JPanel panelInputPoints;
-	private LinkedList<JSpinner> listJsPoints;
-	private LinkedList<JButton> listBtnPointRemove;
+	private ArrayList<JSpinner> listJsPoints;
+	private ArrayList<JButton> listBtnPointRemove;
 	
 	private JPanel panelControls;
 	private JPanel panelComputation;
@@ -104,8 +104,8 @@ public class GUI
 			JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS
 		);
 
-		listJsPoints = new LinkedList<JSpinner>();
-		listBtnPointRemove = new LinkedList<JButton>();
+		listJsPoints = new ArrayList<JSpinner>();
+		listBtnPointRemove = new ArrayList<JButton>();
 
 		panelInput = new JPanel();
 		panelInput.setLayout( new BorderLayout() );
