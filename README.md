@@ -17,15 +17,15 @@ The name speaks for itself.
 > see http://www.cs.iit.edu/~cs561/cs450/disksched/disksched.html or [Google](google.com) those, you know. :earth_asia: <br>
 > work in progress :construction:
 
+- [x] **First Come-First Serve (FCFS)**
 - [x] **Shortest Seek Time First**
-- [ ] First Come-First Serve (FCFS)
 - [ ] Elevator (SCAN)
 - [ ] Circular SCAN (C-SCAN)
 - [ ] LOOK
 - [ ] Circular LOOK (C-LOOK)
 
 ## Screencap
-![alt tag](https://github.com/raymelon/DiskSim/blob/master/screencaps/Capture%20SSTF.JPG)
+![alt tag](https://github.com/raymelon/DiskSim/blob/master/screencap/Capture%20SSTF.JPG)
 
 ## Tools of the Trade
 - [Java](https://www.java.com/en/download/) :coffee:
