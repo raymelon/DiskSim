@@ -1,5 +1,4 @@
 language: java
 script: 
-
-cd src
-javac Program.java
+  - cd src
+  - javac Program.java
