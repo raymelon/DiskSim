@@ -1,2 +1,2 @@
 language: java
-script: src/compile_run.cmd
+script: ./src/compile_run.cmd
