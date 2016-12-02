@@ -2,8 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://reposs.herokuapp.com/?path=raymelon/DiskSim)
-[![HitCount](https://hitt.herokuapp.com/raymelon/DiskSim/hits.svg)](https://github.com/raymelon/DiskSim)
+[![Build Status](https://travis-ci.org/raymelon/DiskSim.svg)](https://travis-ci.org/raymelon/DiskSim)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
+[comment]: # ([![HitCount](https://hitt.herokuapp.com/raymelon/DiskSim/hits.svg)](https://github.com/raymelon/DiskSim))
 
 Disk Scheduling Algorithms Simulator.
 <br>
@@ -18,7 +19,7 @@ The name speaks for itself.
 > work in progress :construction:
 
 - [x] **First Come-First Serve (FCFS)**
-- [x] **Shortest Seek Time First**
+- [x] **Shortest Seek Time First (SSTF)**
 - [ ] Elevator (SCAN)
 - [ ] Circular SCAN (C-SCAN)
 - [ ] LOOK
