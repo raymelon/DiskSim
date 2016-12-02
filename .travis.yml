@@ -1,3 +1,6 @@
 language: java
 os: - windows
-script: ./src/compile_run.cmd
+script: 
+
+cd src
+javac Program.java
