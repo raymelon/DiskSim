@@ -88,6 +88,7 @@ public class Plotter extends JPanel {
 						)
 		);
 
+		// grid color
 		g2D.setColor(Color.GRAY);
 
 		int trackMax = disk.getMax();
