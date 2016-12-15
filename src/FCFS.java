@@ -6,6 +6,7 @@ public class FCFS extends DischedAlgoBase {
 
 	public FCFS(int previous, int current, int seekRate, ArrayList<Integer> tracks) {
 		
+		this.tracks = tracks;
 		this.points = tracks;
 
 		this.previous = previous;

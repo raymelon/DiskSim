@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.Collections;
 import java.lang.Math;
 
 public abstract class DischedAlgoBase {
@@ -54,6 +55,17 @@ public abstract class DischedAlgoBase {
 									"( " + start + " - " + end + " )";
 
 		return thm;
+	}
+
+	public int getTrackMax() {
+		//if( tracks.size() > 0 )
+		return Collections.max(points);
+		//else
+			//return 0;
+	}
+
+	public int getSeekRate() {
+		return seekRate;
 	}
 
 	public String getTHMSolution() {

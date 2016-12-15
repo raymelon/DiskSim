@@ -315,6 +315,8 @@ public class GUI
 
 		plotter.setThickness(4);
 
+		plotter.setAlgorithm(generator);
+
 		int thm_ = generator.getTHM();
 		int st = generator.getST();
 
