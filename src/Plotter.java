@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.BasicStroke;
 import java.awt.Font;
 import java.awt.Dimension;
+import java.awt.FontMetrics;
+import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
 import java.util.Arrays;
@@ -76,9 +78,9 @@ public class Plotter extends JPanel {
 		lineIncrement = algorithm.getSeekRate() + 20;
 
 		int lineRelative = 30;
-		int pointRelative = lineRelative - 5;
+		int pointRelative = lineRelative - 4;
 		int stringRelative = lineRelative + 20;
-		int pointThickness = thickness + 10;
+		int pointThickness = thickness + 8;
 
 		g2D.setStroke( 	new BasicStroke( 
 							1, 
@@ -116,28 +118,43 @@ public class Plotter extends JPanel {
 
 		g2D.setColor(Color.BLUE);
 		g2D.drawLine( previous + lineRelative, y, current + lineRelative, y + lineIncrement);
-		g2D.drawString("" + previous + "     Previous Position", previous + stringRelative, y);
+		drawStringWrapper("" + previous + "     Previous Position", g2D, Color.BLUE, previous + stringRelative, y);
+
 		g2D.fillOval( previous + pointRelative, y - 5, pointThickness, pointThickness );
 		y += lineIncrement;
 
 		g2D.drawLine( current + lineRelative, y, points[0] + lineRelative, y + lineIncrement);
-		g2D.drawString("" + current + "     Current Position", current + stringRelative, y);
+		drawStringWrapper("" + current + "     Current Position", g2D, Color.BLUE, current + stringRelative, y);
+
 		g2D.fillOval( current + pointRelative, y - 5, pointThickness, pointThickness );
 		y += lineIncrement;
 
 		g2D.setStroke( new BasicStroke(thickness) );
-		g2D.setColor(Color.BLACK);
 
 		for( ; x < points.length - 1; x++, y += lineIncrement ) {
 		
 			g2D.drawLine( points[x] + lineRelative, y, points[x + 1] + lineRelative, y + lineIncrement);
 			g2D.fillOval( points[x] + pointRelative, y - 5, pointThickness, pointThickness );
 			
-			g2D.drawString("" + points[x], points[x] + stringRelative, y);
+			drawStringWrapper("" + points[x], g2D, Color.BLACK, points[x] + stringRelative, y);
 		}
 
-		g2D.drawString("" + points[x], points[x] + stringRelative, y);
+		drawStringWrapper("" + points[x], g2D, Color.BLACK, points[x] + stringRelative, y);
 		g2D.fillOval( points[x] + pointRelative, y - 5, pointThickness, pointThickness );
+	}
+
+	// wrapper function for drawString()
+	// adds background fill beneath the string
+	private void drawStringWrapper(String s, Graphics2D g2D, Color foreColor, int x, int y) {
+
+		g2D.setColor(Color.WHITE);
+		FontMetrics fm = g2D.getFontMetrics();
+		Rectangle2D rect = fm.getStringBounds(s, g2D);
+
+		g2D.fillRect(x, y - fm.getAscent(),  (int) rect.getWidth(), (int) rect.getHeight());
+		
+		g2D.setColor(foreColor);
+		g2D.drawString(s, x, y);
 	}
 	
 	@Override

@@ -313,7 +313,7 @@ public class GUI
 		plotter.setMax( (int) jsMaxTrack.getValue() );
 		plotter.setPoints( points.toArray( new Integer[ points.size() ] ), (int) jsPrevious.getValue(), (int) jsCurrent.getValue() );
 
-		plotter.setThickness(4);
+		plotter.setThickness(2);
 
 		plotter.setAlgorithm(generator);
 
