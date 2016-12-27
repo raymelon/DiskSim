@@ -64,10 +64,18 @@ public class Plotter extends JPanel {
 	}
 
 	private void drawRuler(Graphics2D g2D) {
+
+		int trackMax = disk.getMax();
+
 		g2D.setStroke( new BasicStroke(thickness) );
-		g2D.drawLine( 10, 20, disk.getMax() + 50, 20 );
-		g2D.drawString( "0", 10, 15 );
-		g2D.drawString( String.valueOf(disk.getMax()), disk.getMax() + 30, 15 );
+		g2D.drawLine( 10, 20, trackMax + 10, 20 );
+		//g2D.drawString( "0", 10, 15 );
+
+		for(int i = 0; i < trackMax; i += 40) {
+			g2D.drawString("" + i, i + 10, 15);
+		}
+
+		g2D.drawString( String.valueOf(trackMax), trackMax + 10, 15 );
 	}
 
 	private void graph(Graphics2D g2D) {
@@ -77,8 +85,8 @@ public class Plotter extends JPanel {
 
 		lineIncrement = algorithm.getSeekRate() + 20;
 
-		int lineRelative = 30;
-		int pointRelative = lineRelative - 4;
+		int pointRelative = 10;
+		int lineRelative = pointRelative + 4;
 		int stringRelative = lineRelative + 20;
 		int pointThickness = thickness + 8;
 
@@ -97,13 +105,13 @@ public class Plotter extends JPanel {
 		int trackCount = (Arrays.asList(points).size() + 1) * lineIncrement;
 
 		// vertical lines of grid
-		for (int i = 10; i <= trackMax + y; i += lineIncrement) {
+		for (int i = pointRelative; i <= trackMax + pointRelative; i += 40) {
         	g2D.drawLine(i, y, i, trackCount + y);
        	}
 
        	// horizontal lines of grid
         for (int i = y; i <= trackCount + y; i += lineIncrement) {
-            g2D.drawLine(10, i, trackMax + y, i);
+            g2D.drawLine(pointRelative, i, trackMax + pointRelative, i);
         }
 
 		g2D.setStroke( 	new BasicStroke( 
