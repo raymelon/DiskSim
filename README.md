@@ -1,10 +1,9 @@
-# DiskSim :minidisc: [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check out DiskSim! Disk Scheduling Algorithms Simulator. @github https://github.com/raymelon/DiskSim)
+# DiskSim :minidisc: [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20DiskSim!%20Disk%20Scheduling%20Algorithms%20Simulator.%20%40github%20https://github.com/raymelon/DiskSim)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://reposs.herokuapp.com/?path=raymelon/DiskSim)
 [![Build Status](https://travis-ci.org/raymelon/DiskSim.svg)](https://travis-ci.org/raymelon/DiskSim)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
-[comment]: # ([![HitCount](https://hitt.herokuapp.com/raymelon/DiskSim/hits.svg)](https://github.com/raymelon/DiskSim))
 
 Disk Scheduling Algorithms Simulator.
 <br>
